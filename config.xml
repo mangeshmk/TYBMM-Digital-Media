@@ -2,10 +2,9 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "com.edusanchar.tybmmdigitalmedia"
-    versionCode = "10"
-    version     = "1.0.0" >
+    version   = "1.0.0">
 
-<name>TYBMM Digital Media</name>
+<name>EduSanchār TYBMM Digital Media</name>
 
 <description>
 App for University of Mumbai's TYBMM Sem VI students to study and revise the Digital Media course
@@ -29,7 +28,7 @@ Dr. Mangesh Karandikar
     <preference name="permissions" value="none"/>
 
  <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"         	value="cli-6.5.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"         	value="cli-6.4.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                		value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              		value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 		value="true" />           <!-- all: hides the status bar at the top of the screen -->
@@ -51,6 +50,8 @@ Dr. Mangesh Karandikar
 
     <!-- Define app splash screen for each platform. -->
 	<splash src="splash.png" />
+
+	
 
  	<access origin="*"/> <!-- allow local pages -->
 
