@@ -50,7 +50,7 @@ Dr. Mangesh Karandikar
 
 
     <!-- Define app splash screen for each platform. -->
-	<gap:splash src="splash.png" />
+	<splash src="splash.png" />
 
  	<access origin="*"/> <!-- allow local pages -->
 
