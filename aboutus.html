@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	#faqq
+	{
+		width:95%;
+		margin:auto;
+		padding-left:10px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		text-align:left;
+	}
+	
+    </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/edusancharlogo_or_hor.jpg" width="500" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        	<li class="acc-header3" id="faq"> 
+		        एड्यूसंचार बद्दल        	</li>
+            
+    </ul>
+  </div>
+  <div id="faqq">
+           
+              <p>&nbsp;</p>
+              <p>शिक्षणाचा संचार मोबाइल आणि डिजिटल माध्यमांतून जास्तितजास्त लोकांमध्ये सहज उपलब्ध करून देणे हे या उपक्रमाचे ध्येय आहे. </p>
+              <p>&nbsp;</p>
+              <p>भारतातील मुंबई विद्यापीठाच्या संज्ञापन आणि पत्रकारिता विभागातील प्राध्यापक <a href="http://www.karandikars.com" target="_blank">डॉ मंगेश करंदीकर</a> यांनी हे ऍप तयार केले अाहेत. एड्यूसंचार द्वारे संज्ञापन अभ्यासातील संकल्पना आणि सिद्धांतांचा असाच ऍप इंग्रजीत व मराठीत उपलब्ध केला आहे व यातील कॉन्टेन्ट डॉ मंगेश करंदीकर व डॉ संजय रानडे यांनी तयार केला अाहे. हा दुसरा ऍप मराठीत संज्ञापन शिकणार्‍या, शिकवणार्‍या आणि संज्ञापनाचा उपयोग करणार्‍यांसाठी आहे. याचे लेखक डॉ संजय रानडे अाहेत.</p>
+              <p>&nbsp;</p>
+              <p>तरुणांनी मोबाईल तंत्रज्ञान मोठ्या प्रमाणावर आपलेसे केले आहे आणि त्याचा वापर करून ते भोवतालच्या जगाशी संबंध/संपर्क ठेवून असत्तात. याच तंत्रज्ञानाचा वापर करून आता त्यांना संचारी असतांना अभ्यास करणे शक्य होणार आहे.  मोबाईल फोनवर हा ऍप उपलब्ध केल्यामुळे नेटवर्क नसतांनाही याचा उपयोग करता येऊ शकतो. सर्व संकल्पना/सिद्धांतांना वेगवेगळ्या गटांत विभागले आहे त्यामुळे अभ्यास करण्यात सहजता आली आहे. </p>
+              <p>&nbsp;</p>
+              <p>प्रत्येक संकल्पना/सिद्धांतासोबत काही लिंक्स दिल्या आहेत ज्यांवरून अधिक माहिती मिळू शकते. भाषा साधी आणि सोपी ठेवण्यात आली आहे.  या ऍपची रचना याचा वापर करणार्‍यासाठी सोपी  ठेवण्यात आली आहे. ऍपचा वापर करण्यासाठी विशेष तंत्र माहीत असण्याची आवश्यकता नाही. सामान्यपणे ऍंड्रॉइड फोन आणि इंटरनेट वापरणार्‍यांना या ऍपचा उपयोग करता येईल. संज्ञापन क्षेत्रातील विद्यार्थी, शिक्षक आणि व्यावसायिकांसाठी हा ऍप हाताशी असणे आवश्यक आहे.  </p>
+              <p>&nbsp;</p>
+              <p>अशाप्रकारचा संज्ञापन विषयावरील जगातील हे पहिलेच ऍप आहेत. हे ऍप डाउनलोड करा आणि आपल्या संज्ञापन आणि माध्यम जगाचा अभ्यास आणि उजळणी शिस्तबद्ध आणि शास्त्रीय उपकरणे वापरून लगेच करा.</p>
+              <p>&nbsp;</p>
+              <p>संपर्क : quicklearn@edusanchar.in</p>
+              <p>वेबसाईट: www.edusanchar.in</p>
+              <p>&nbsp;</p>
+  </div>
+  <div class="accordion">
+    	<ul>
+       	  <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+	      </li>
+		</ul>
+  </div>
+</body>
+</html>

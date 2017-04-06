@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#FFF;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.linkers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+.accordion .acc-header a {
+			width:99.5%;
+		text-align:left;
+	display: block;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#666;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight:normal;
+	font-size:large;
+	border-bottom: 2px solid #aaa;
+	background:#FAFAFA;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#BAD6E3;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#fbb040;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+.accordion .acc-header5 a {
+		width:99.5%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size:larger;
+	border-bottom: 1px solid #aaa;
+	background:#000;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:larger;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #FFF;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/edusancharlogo_or_hor.jpg" width="349" alt="sancharFirst Logo"></a></div>
+  
+  <div class="accordion">
+    	<ul>
+        
+<li class="acc-header5" id="alpha"><a href="#alpha">Main Features of Digital Media</a></li>
+<li class="acc-header" id="abdecode"><a href="#abdecode">Binary/Numerical</a><div class="acc-content">
+<p>
+All digital content is numerical in nature. New media is programmable, can be manipulated, and converted from one form to another. The numerical nature of digital media allows one to write algorithms, and program the content as needed. Which is why today we have transmedia content - creation of content that can be viewed / enjoyed on multiple platforms. It is also known a 'fluxity' where the content is in for of flux, and can be easily converted from one form to other.</p>
+</div>
+</li>
+
+<li class="acc-header" id="mod"> 
+<a href="#mod">Modularity</a>
+<div class="acc-content"><p>Because the digital content is in form of flux, it is easily programmable and be converted or transcoded into several different formats. While doing so, programmers write their algorithms based on modules, which can be reused. To give a simple example, if I write a module on the 'eraser' tool in Photoshop, I write it in such a way that it can be used for all images. The 'layers' are another example of modular program, where each layer can be treated as an independent module, yet, together they can form an entirely different content.</p>
+</div>
+</li>
+<li class="acc-header" id="autom"> 
+		        <a href="#autom">Automation</a>
+		        <div class="acc-content">
+		          <p>Do try out using the different 'styles' in MS Word. If you have large amount of text, you can seperate it into several chapters and sub chapters with 'Headings' and 'Sub headings' using the 'Styes' menu that appears on the top of your MS Word screen. If you do that, the task of making the Table of Contents is done in a jiffy, in exactly 2 clicks. This is an automated task for which programmers have written a complicated algorithm and program. You also have tasks that MS Word performs for you like 'Grammar Check', 'Spell Check', etc. These are smaller, modules written into the larger framework of MS Word.</p>
+	          </div>
+		    </li>
+           	<li class="acc-header" id="tmed"> 
+		        <a href="#tmed">Transmediality</a>
+		        <div class="acc-content">
+		          <p>As written earlier, because of binary nature of the digital content, you can transcode / convert one form of content into another form easily. For users, it is a simple matter of using the GUI or the Graphic User Interface - where the user just clicks a few buttons, changes the parameters and the software does the job. However, todays media universe is varied, both, in terms of the type and format of the content and the content delivery platforms. So you shoot a film in HD or a 4K resolution, transfer it on to your computer, pull out images of amazing clarity, take the sound and make it into an independent sound file, or send the video to YouTube, or your mobile phone, or even use it to show in the theatre on a large screen. This is possible only because the content is in form of binary data.</p>
+	          </div>
+		    </li>
+			
+			
+			<li class="acc-header" id="transp"> 
+		        <a href="#transp">Transparency</a>
+		        <div class="acc-content">
+		          <p>How digital media be transparent? Actually a lot of it is. We see only the front-end of the software, the GUI, but there is a lot that we actually 'see through'. We don't actually 'see' the program that functions when we perform a task on the computer. So there is a program running in the background monitoring every key I press while I write this, or every click of the mouse. Did you know, there is a separate line of code written for 'key up', 'key press', 'key hold', or 'mouse click', 'mouse over', 'mouse down' 'mouse up', 'mouse movement'? All these programmes run in the background. You notice them only when they don't work. Imagine that you drive a vehicle. Till the vehicel starts every time, you hardly notice it. But the moment the vehicle doesn't start, you notice that there is a wire that is loose, or that your carbaurettor is jammed, or maybe your battery is discharged.</p>
+	          </div>
+		    </li>
+			
+			
+			<li class="acc-header" id="hytxt"> 
+		        <a href="#hytxt">Hypertextual</a>
+		        <div class="acc-content"><p>Hypertextuality is a quality that allows you to operate/access another media from within the media you are using. An excellent example would be the 'links' or hyperlinks on a web page. These links provide a link, or 'take you' to another page or a website which is in no way connected to the present website. The two website might be of entirely different organisations, hosted on different servers on the opposite sides of the globe.</p>
+	            </div>
+		    </li>
+			
+			
+			<li class="acc-header" id="actu"> 
+		        <a href="#actu">Interactive</a>
+		        <div class="acc-content">
+		          <p>What would be your online experience without interactivity? Today the field of Digital Marketing is growing at the rate of 30% p.a. only because of the interactive nature of digital media. Interactivity is a result of several developments in software, hardware, and telecommunications over the last 20 years. The interactivity is what is driving today's world.</p>
+	            </div>
+		    </li>
+			
+            <li class="accordian2" id="seo"><a href="https://goo.gl/eQl1q2"><img src="assets/images/digital_marketing_ad1.jpg" width="100"></a></li>
+			
+			<li class="acc-header5" id="alpha"> 
+	        <a href="index.html">Home Page</a>
+</li>
+</ul>
+  </div>
+    
+  </body>
+</html>

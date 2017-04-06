@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#FFF;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.linkers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+.accordion .acc-header a {
+			width:99.5%;
+		text-align:left;
+	display: block;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#666;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight:normal;
+	font-size:large;
+	border-bottom: 2px solid #aaa;
+	background:#FAFAFA;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#BAD6E3;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#fbb040;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:1px;
+		font-size:large;
+		text-indent:0px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+.accordion .acc-header5 a {
+		width:99.5%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size:larger;
+	border-bottom: 1px solid #aaa;
+	background:#000;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:larger;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #FFF;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/edusancharlogo_or_hor.jpg" width="349" alt="sancharFirst Logo"></a></div>
+  
+  <div class="accordion">
+    	<ul>
+        
+<li class="acc-header5" id="alpha"><a href="#alpha">The Evolution of Internet</a></li>
+<li class="acc-header" id="abdecode"><a href="#abdecode">The Internet Timeline (Click to expand)</a><div class="acc-content">
+<p>The Internet, as we know today has evolved over the last few decades. Beginning with a military exercise to connect the US bases, within 3 decades, it was commercialized. We know how it is indisepensible today. Following is the timeline to show how the Internet developed.</p>
+            <br>
+            <br>
+            1957 - USSR launches Sputnik into space. In response, the USA creates the Advanced Research Projects Agency (ARPA) with the mission of becoming the leading force in science and new technologies.
+            <br>
+            <br>
+            1962 - J.C.R. Licklider of MIT proposes the concept of a ìGalactic Network.î For the first time ideas about a global network of computers are introduced. J.C.R. Licklider is later chosen to head ARPA's research efforts.
+            <br>
+            <br>
+            1962 - Paul Baran, a member of the RAND Corporation, determines a way for the Air Force to control bombers and missiles in case of a nuclear event. His results call for a decentralized network comprised of packet switches.
+            <br>
+            <br>
+            1968 - ARPA contracts out work to BBN. BBN is called upon to build the first switch.
+            <br>
+            <br>
+            1969 - RPANET created - BBN creates the first switched network by linking four different nodes in California and Utah; one at the University of Utah, one at the University of California at Santa Barbara, one at Stanford and one at the University of California at Los Angeles.
+            <br>
+            <br>
+            1972 - Ray Tomlinson working for BBN creates the first program devoted to email.
+            <br>
+            <br>
+            1972 - ARPA officially changes its name to DARPA Defense Advanced Research Projects Agency.
+            <br>
+            <br>
+            1972 - Network Control Protocol is introduced to allow computers running on the same network to communicate with each other.
+            <br>
+            <br>
+            1973 - Vinton Cerf working from Stanford and Bob Kahn from DARPA begin work developing TCP/IP to allow computers on different networks to communicate with each other.
+            <br>
+            <br>
+            1974 - Kahn and Cerf refer to the system as the Internet for the first time.
+            <br>
+            <br>
+            1976 - Ethernet is developed by Dr. Robert M. Metcalfe.
+            <br>
+            <br>
+            1976 - SATNET, a satellite program is developed to link the United States and Europe. Satellites are owned by a consortium of nations, thereby expanding the reach of the Internet beyond the USA.
+            <br>
+            <br>
+            1976 - Elizabeth II, Queen of the United Kingdom, sends out an email on 26 March from the Royal Signals and Radar Establishment (RSRE) in Malvern.
+            <br>
+            <br>
+            1976 - AT& T Bell Labs develops UUCP and UNIX.
+            <br>
+            <br>
+            1979 - USENET, the first news group network is developed by Tom Truscott, Jim Ellis and Steve Bellovin.
+            <br>
+            <br>
+            1979 - IBM introduces BITNET to work on emails and listserv systems.
+            <br>
+            <br>
+            1981 - The National Science Foundation releases CSNET 56 to allow computers to network without being connected to the government networks.
+            <br>
+            <br>
+            1983 - Internet Activities Board released.
+            <br>
+            <br>
+            1983 - TCP/IP becomes the standard for internet protocol.
+            <br>
+            <br>
+            1983 - Domain Name System introduced to allow domain names to automatically be assigned an IP number.
+            <br>
+            <br>
+            1984 - MCI creates T1 lines to allow for faster transportation of information over the internet.
+            <br>
+            <br>
+            1984- The number of Hosts breaks 1,000
+            <br>
+            <br>
+            1985- 100 years to the day of the last spike being driven on the Canadian Pacific Railway, the last Canadian university was connected to NetNorth in a one year effort to have coast-to-coast connectivity
+            <br>
+            <br>
+            1987 - The new network CREN forms.
+            <br>
+            <br>
+            1987- The number of hosts breaks 10,000
+            <br>
+            <br>
+            1988 - Traffic rises and plans are to find a new replacement for the T1 lines.
+            <br>
+            <br>
+            1989- The Number of hosts breaks 100 000
+            <br>
+            <br>
+            1989- Arpanet ceases to exist
+            <br>
+            <br>
+            1990 - Advanced Network & Services (ANS) forms to research new ways to make internet speeds even faster. The group develops the T3 line and installs in on a number of networks.
+            <br>
+            <br>
+            1990 - A hypertext system is created and implemented by Tim Berners-Lee while working for CERN.
+            <br>
+            <br>
+            1990- The first search engine is created by McGill University, called the Archie Search Engine
+            <br>
+            <br>
+            1991- U.S green-light for commercial enterprise to take place on the Internet
+            <br>
+            <br>
+            1991 - The National Science Foundation (NSF) creates the National Research and Education Network (NREN).
+            <br>
+            <br>
+            1991 - CERN releases the World Wide Web publicly on August 6th, 1991
+            <br>
+            <br>
+            1992 - The Internet Society (ISOC) is chartered
+            <br>
+            <br>
+            1992- Number of hosts breaks 1,000,000
+            <br>
+            <br>
+            1993 - InterNIC released to provide general services, a database and internet directory.
+            <br>
+            <br>
+            1993- The first web browser, Mosaic (created by NCSA), is released. Mosaic later becomes the Netscape browser which was the most popular browser in the mid 1990's.
+            <br>
+            <br>
+            1994 - New networks added frequently.
+            <br>
+            <br>
+            1994 - First internet ordering system created by Pizza Hut.
+            <br>
+            <br>
+            1994 - First internet bank opened: First Virtual.
+            <br>
+            <br>
+            1995 - NSF contracts out their access to four internet providers.
+            <br>
+            <br>
+            1995 - NSF sells domains for a $50 annual fee.
+            <br>
+            <br>
+            1995 - Netscape goes public with 3rd largest ever NASDAQ IPO share value
+            <br>
+            <br>
+            1995- Registration of domains is no longer free.
+            <br>
+            <br>
+            1996- The WWW browser wars are waged mainly between Microsoft and Netscape. New versions are released quarterly with the aid of internet users eager to test new (beta) versions.
+            <br>
+            <br>
+            1996 - Internet2 project is initiated by 34 universities
+            <br>
+            <br>
+            1996 - Internet Service Providers begin appearing such as Sprint and MCI.
+            <br>
+            <br>
+            1996 - Nokia releases first cell phone with internet access.
+            <br>
+            <br>
+            1997- (Arin) is established to handle administration and registration of IP numbers, now handled by Network Solutions (IinterNic)
+            <br>
+            <br>
+            1998- Netscape releases source code for Navigator.
+            <br>
+            <br>
+            1998 - Internet Corporation for Assigned Names and Numbers (ICANN) created to be able to oversee a number of Internet-related tasks
+            <br>
+            <br>
+            1999 - A wireless technology called 802.11b, more commonly referred to as Wi-Fi, is standardized.
+            <br>
+            <br>
+            2000- The dot com bubble bursts, numerically, on March 10, 2000, when the technology heavy NASDAQ composite index peaked at 5,048.62
+            <br>
+            <br>
+            2001 - Blackberry releases first internet cell phone in the United States.
+            <br>
+            <br>
+            2001 - The spread of P2P file sharing across the Internet
+            <br>
+            <br>
+            2002 -Internet2 now has 200 university, 60 corporate and 40 affiliate members
+            <br>
+            <br>
+            2003- The French Ministry of Culture bans the use of the word "e-mail" by government ministries, and adopts the use of the more French sounding "courriel"
+            <br>
+            <br>
+            2004 - The Term Web 2.0 rises in popularity when O'Reilly and MediaLive host the first Web 2.0 conference.
+            <br>
+            <br>
+            2004- Mydoom, the fastest ever spreading email computer worm is released. Estimated 1 in 12 emails are infected.
+            <br>
+            <br>
+            2005- Estonia offers Internet Voting nationally for local elections
+            <br>
+            <br>
+            2005-Youtube launches
+            <br>
+            <br>
+            2006- There are an estimated 92 million websites online
+            <br>
+            <br>
+            2006 - Zimbabwe's internet access is almost completely cut off after international satellite communications provider Intelsat cuts service for non-payment
+            <br>
+            <br>
+            2006- Internet2 announced a partnership with Level 3 Communications to launch a brand new nationwide network, boosting its capacity from 10Gbps to 100Gbps
+            <br>
+            <br>
+            2007- Internet2 officially retires Abilene and now refers to its new, higher capacity network as the Internet2 Network
+            <br>
+            <br>
+            2008- Google index reaches 1 Trillion URLs
+            <br>
+            <br>
+            2008 - NASA successfully tests the first deep space communications network modeled on the Internet. Using software called Disruption-Tolerant Networking, or DTN, dozens of space images are transmitted to and from a NASA science spacecraft located about more than 32 million kilometers from Earth
+            <br>
+            <br>
+            2009 - ICANN gains autonomy from the U.S government
+            <br>
+            <br>
+            2010- Facebook announces in February that it has 400 million active users.
+            <br>
+            <br>
+            2010 - The U.S House of Representatives passes the Cybersecurity Enhancement Act (H.R. 4061)
+            <br>
+            <br>
+            2012 - A major online protest shook up U.S. Congressional support for two anti-Web piracy bills - the Stop Online Piracy Act in the House and the Protect IP Act in the Senate. Many in the tech industry are concerned that the bills will give media companies too much power to shut down websites.
+</p>
+</div>
+</li>
+
+<li class="acc-header" id="best"><a href="#best"><img src="assets/images/insert-best-courses.jpg" width="646"></a>
+<div class="acc-content">
+        <p>	              <strong><br>
+          For enquiries about the courses given below, call DGMC on 9004444091/92 OR 022-66812351<br>
+          <br>
+          1. PGDM in Media and Communication @ DGMC with Specialization in MEdia and Entertainment and Advertising and Communication</strong><br>
+		            Believe me, today the Media and Communication sector needs people who understand media products, and know how to deal with them. Media products CANNOT be treated like FMCG brands. Most of them are not sold over the counter, in shops. Though typical and regular MBA degree gives managerial training in Marketing, Finance, or HR
+	              it doesnot in any way help you understand 'media' as a product. PGDM Media and Communication programme at DGMC not teaches you production of content in all forms and formats of media, but more importantly, also makes you industry ready by giving you managerial training with live projects and field work.<strong> And frankly, BMM graduates are best suited for this PGDM programme.<br>
+		            <br>
+	              - Better Career Prospects</strong><br>
+	              By joining PGDM Media and Communication at DGMC - Deviprasad Goenka Management College of Media Studies, you gain insights into the industry that makes you able to be placed in a managerial capacity in the media sector. In short, you become 'industry ready'. <br>
+	              <br>
+	              <strong>- Innovative pedagogy</strong><br>
+	              The PGDM Media and Communication employs a very innovative pedagogy, with live projects, field work at its core. The projects are designed in consultation with experts from the industry, adding immense value to your learning curve.<br>
+	              <br>
+	              <strong>- International Immersion</strong><br>
+	              This year, our students had visited Singapore, where they attended a course in Gaming Management, interacted with locals, learnt about culture of another country, and visited media houses and Universal Studios. International Immersion gives you a global perspective of media business.<br>
+	              <br>
+	              <strong>- Rural Immersion</strong><br>
+	              India is a young country, and more than 45% of India's population is between the age group of 18 and 35 years. With rapid urbanisation, your consumer base has become younger, AND increasingly rural. Your future media markets are in Rural India. The Rural Immersion program trains you to indurstand the consumer dynamics of tomorrow, truly making you ready for the future. <br>
+	              <br>
+          So do visit the DGMC campus to get more details. Meet with the faculty and the counselors, interact with some of our PGDM students. Do join. 
+          <br>
+          <br>
+          <strong>2. MA in Film, Television and New Media Production<br>
+        </strong>This is a full time MA Degree from University of Mumbai and is fully production oriented, giving you hands-on experience in everything in media production - from script writing to VFX and Post production.<br>
+        <br>
+        <strong>3. MA in Communication and Journalism<br>
+        </strong>THose who wish to into the noble profession of journalism, this is the degree that you should obtained. MACJ is fully geared to make you journalists.<br>
+        <br>
+        <strong>PROFESSIONAL SHORT-TERM MEDIA COURSES</strong></p>
+        <br>
+        University of Mumbai also offers several professional short term course. Those who are not inclined to spend 2 years in education, can join these courses to get additional qualification to increase your job prospects with a better salary. These courses can also help you be on your own, either freelancing, or becoming an entrepreneur.<br>
+        <br>
+        <strong>1. PG Diploma in Digital Marketing<br>
+        </strong>Create your own imprint in the field of Digital Media!  University of Mumbai's GICED in association with DGMC has launched career centric certificate course in the domain of digital marketing. Digital marketing as a field that is poised to lead marketing strategies, is constantly evolving with each new social platform, mobile device or website redesign while redefining a brand's strategy for reaching new audiences and engaging current trends and changes.  More than 90% of the marketers are using the digital media in some form or the other as per 'Internet and mobile association of India (IAMAI)'.  The course guides the students through the practical aspects apart from theory and skills. The teaching and assessment methodologies are modern and suitable for actual learning. <br>
+        <br>
+        <strong>2. PG Diploma in Communication Design<br>
+        </strong>Ignite your Creative Spark!  What is design? It is a combination of several concepts and ideas. Design invents something of use. It brings together the human and the technical or the technological. There is a coordination involved in this. From the controlled environment of the laboratories to our homes our ideas travel through design. Design projects ideas into the future. It uses knowledge, it creates new knowledge, and it brings together intuition, instinct and intent. It involves creativity. It involves taking decisions and responsibility. <br>
+        <br>
+        The purpose of communication design, an important aspect of communication is to be able to deal with oneself and challenges of the new era. Our relationship with ourselves is shaped through our communication with the reality around us.  Today, as more and more of us become star performers in our own story, as we project ourselves into the world through mass media devices and show off our harvest of 'likes' we are at once the performer and the audience. We are the communicators and the communicated. In this wonderful scenario it is all the more important to look closely at what we communicate, why we communicate, how we communicate and to whom we communicate.  <br>
+        <br>
+        We shall be locating the design of communication through several theories, practical lessons in perspectives, clay modeling, painting, photography, video, fonts and typography, and in the Natyashastra. It is the purpose of communication design to shape information, to control and direct its flow, to sharpen its tools like language, sound and gesture, to create and shape knowledge and finally the attitudes and the behavior of people and institutions.  Why do we do that? Because we have to engage with ourselves, our bodies, our minds, our intellect, our spirit as much as and at times more so than the world that is 'outside' our being. We seek to communicate so that we can be silent – fearless and free. .<br>
+        <br>
+        <strong>3. Certificate Course in Cinematography<br>
+        </strong>Become a professional in the field of Cinematography!  University of Mumbai  in association with DGMC has launched career centric certificate course in Cinematography.  Cinematography is the process of capturing a vision on film and is not just about camera but has to do a lot with lighting. One can truly call oneself a cinematographer only after having mastered the art of lighting.  The course is delivered through a series of lectures, demonstrations and intensive practical sessions.  As both an art and a craft, it is a dynamic process that involves the composition of light, shadow, time and movement. <br>
+        <br>
+        <strong>4. Certificate Course in Digital Film Making <br>
+        </strong>Be an independent filmmaker! Unleash your Creativity!  For those who are willing to learn everything about film making.... Digital Flim making is the course. University of Mumbai in association with DGMC has launched career centric certificate course in Digital Film making. As a digital film making student, you will undertake the entire process of film making, learning each and every discipline within. With the advent of the digital format everything from advertisement to feature films are being shot on digital format. Hence it is very much essential to get acquainted with the workflow of this new format.  The digital film making course entails learning about the cinematography, direction, acting, sound, make up, art direction, non-linear editing as well as the workflow of the new age digital cameras . The Digital film making course aptly trains you for the professional world. <br>
+        <br>
+        <strong>5. Certificate Course in Sound Engineering and Design <br>
+        </strong>Be a professional in the field of Sound Designing!  The underlying thought of this course being that the real soul of a film or a video lies in appropriate and balanced sound, which has gained huge importance in the recent years.  Sound is that element which brings the entire scene to life, literally! For that you will have to learn bit of physics and of course functioning of a variety of gadgets, microphones, mixers and software. Alongside, you will be trained in various recording, sound editing &amp; mixing techniques.  A good sound professional will first have to imagine an appropriate sound/ score with respect to a shot, and finalize the best available equipment to generate those sound clips. You will learn all this hands-on in our professional sound recording studio/specially-equipped classrooms. Specialization in Electronic Music Production is also available along with Sound Design &amp; Recording. <br>
+        <br>
+        <strong> For enquiries about the courses, call DGMC on 9004444091/92 OR 022-66812351</strong><br>
+</div>
+</li>
+
+
+			
+			<li class="acc-header5" id="alpha"> 
+	        <a href="index.html">Home Page</a>
+</li>
+</ul>
+  </div>
+    
+  </body>
+</html>
